@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <div class="list-group">
+    <h1>Lista de Productos</h1>
+    <ul>
+        {% for product in products %}
+            <a href="#" class="list-group-item list-group-item-action">{{ product.name }}</a>
+            {% comment %} <li>{{ product.name }} - {{ product.description }}</li> {% endcomment %}
+        {% endfor %}
+    </ul>
+
+  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+  <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+  <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+  <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+</div>
+</body>
+</html>
