@@ -16,10 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
-from sap.views import index
+from sap.views import login, login_view,home,logout_sesion,product_list,add_user,add_product,delete_products
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
+    path('', login,name='login'),
+    path('home/', home, name='home'),
+    path('product_list/', product_list, name='product_list'),
+    path('add_user/', add_user, name='add_user'),
+    path('add_product/', add_product, name='add_product'),
+    path('delete_product/', delete_products, name='delete_product'),
+    path('logout/', logout_sesion, name='logout'),
     #path('', include('sap.urls')),
 ]

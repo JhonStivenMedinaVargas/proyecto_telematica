@@ -1,0 +1,33 @@
+<!-- login.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+
+  <h2>Iniciar Sesión</h2>
+
+  {% if error_message %}
+    <p style="color: red;">{{ error_message }}</p>
+  {% endif %}
+
+  <form method="post" action="">
+    {% csrf_token %}
+    {{ form.username.label_tag }} {{ form.username }}
+    <br>
+    {{ form.password.label_tag }} {{ form.password }}
+    <br>
+    <input type="submit" value="Iniciar sesión">
+    {% if form.errors %}
+    <p style="color: red;">{{ form.errors }}</p>
+{% endif %}
+  </form>
+
+  <p>¿No tienes una cuenta? <a >Regístrate</a></p>
+
+</body>
+</html>

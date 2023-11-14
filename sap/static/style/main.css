@@ -1,0 +1,17 @@
+.navbar{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.header_top{
+    background: linear-gradient(269.94deg, #172399 9.29%, #0056BA 94.79%) !important;
+    opacity: 0.9;
+    /* height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px; */
+  }

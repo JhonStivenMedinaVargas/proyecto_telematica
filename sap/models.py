@@ -5,6 +5,7 @@ from django.contrib.auth.models import AbstractUser, Group, Permission
 # class RegistroUsuario(models.Model):
 #     user = models.CharField(max_length=255)
 #     password = models.CharField()
+#     rol = models.CharField()
 
 class CustomUser(AbstractUser):
     roles = models.CharField(max_length=20, blank=True)
